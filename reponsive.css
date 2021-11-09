@@ -1,0 +1,23 @@
+/* máy tính */
+@media (min-width:1024px){
+    #header .mobile-menu{
+        display: none;
+    }
+}
+
+/* tablet */
+@media (min-width:760px)  and (max-width:1024px){
+    .mobile-menu{
+        display: none;
+    }
+}
+
+/* phone */
+@media (max-width: 760px){
+    #nav> li {
+        display: block;
+    }
+    #header .search-button{
+        display: none;
+    }
+}
