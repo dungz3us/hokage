@@ -57,7 +57,7 @@ html{
     left: 0;
     right: 0;
     z-index: 1;
-    /* overflow: hidden; */
+    
 }
 
 #nav{
@@ -134,16 +134,20 @@ html{
 
 #header .search-button:hover{
     background-color: red;
+    
 }
 
 #header .mobile-menu:hover{
     background-color: #ccc;
 }
+#header .menu-icon:hover{
+    color: black;
+}
 #slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background:  url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    background:  url('/img/chicago.jpg') top center / cover no-repeat;
 } 
 #slider .text-content{
     position: absolute;

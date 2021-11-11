@@ -14,10 +14,14 @@
 
 /* phone */
 @media (max-width: 760px){
+    #header{
+        overflow: hidden;
+    }
     #nav> li {
         display: block;
     }
     #header .search-button{
         display: none;
     }
+    
 }

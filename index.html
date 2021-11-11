@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> The hokage</title>
-    <link rel="icon" href="/theband/assets/img/làng lá.png lá.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/font/themify-icons/">
-    <link rel="stylesheet" href="/assets/css/reponsive.css">
+    <link rel="icon" href="img/làng lá.png lá.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/reponsive.css">
 </head>
 <body>
     <div id="main">
@@ -24,9 +24,9 @@
                         <i class="nav-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                         
                     </ul>
@@ -35,7 +35,7 @@
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
             </div>
-            <div class="mobile-menu">
+            <div id="mobile-menu" class="mobile-menu">
                 <i class="menu-icon ti-menu"></i>
             </div>
             
@@ -68,20 +68,20 @@
                         <p class="member-name">
                             Hokage Hằng
                         </p>
-                        <img src="assets/img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
+                        <img src="img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
                     </div>
                 
                     <div class="member-item">
                     <p class="member-name">
                         Hokage Híu
                     </p>
-                        <img src="assets/img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
+                        <img src="img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
                     </div>
                     <div class="member-item">
                     <p class="member-name">
                         Hokage Dũn
                     </p>
-                    <img src="assets/img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
+                    <img src="/img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -103,7 +103,7 @@
 
                     <div class=" row place-list">
                         <div class="col col-3">
-                            <img src="assets/img/newyork.jpg" alt="New york" class="place-img">
+                            <img src="img/newyork.jpg" alt="New york" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <P class="place-time">Fri 27 Nov 2016</P>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <div class="col col-3">
-                            <img src="assets/img/paris.jpg" alt="Paris" class="place-img">
+                            <img src="/img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <P class="place-time">Sat 28 Nov 2016</P>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                         <div class="col col-3">
-                            <img src="assets/img/sanfran.jpg" alt="San Francisco" class="place-img">
+                            <img src="/img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <P class="place-time">Sun 29 Nov 2016</P>
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div class="map-section">
-            <img src="assets/img/hokage.jpg" alt="map">
+            <img src="img/hokage.jpg" alt="map">
         </div>
 
         <div id="footer">
@@ -240,8 +240,26 @@
         })
     </script>
 
-    <script>
+    <script> 
+        var header =document.getElementById('header');
+        var mobileMenu =document.getElementById('mobile-menu');
+        var headerheight = header.clientHeight
+        
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerheight;
+            if (isClose) {
+                header.style.height ='auto';
+            } else {
+                header.style.height = null ;
+            }
 
+        }
+        // đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href *="#"]')
+        for  (var i=0 ; i< menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            console.log(menuItem)
+        }
     </script>
 </body>
 </html>
