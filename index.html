@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> The hokage</title>
-    <link rel="icon" href="img/làng lá.png lá.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="img/làng lá.png " type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="/reponsive.css">
@@ -32,12 +32,15 @@
                     </ul>
                 </li>
             </ul>
-            <div class="search-button">
-                <i class="search-icon ti-search"></i>
-            </div>
+
             <div id="mobile-menu" class="mobile-menu">
                 <i class="menu-icon ti-menu"></i>
             </div>
+
+            <div class="search-button">
+                <i class="search-icon ti-search"></i>
+            </div>
+            
             
         </div>
         
@@ -64,20 +67,20 @@
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="member">
-                    <div class="member-item">
+                    <div class="member-item member-mobile mt-32">
                         <p class="member-name">
                             Hokage Hằng
                         </p>
                         <img src="img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
                     </div>
                 
-                    <div class="member-item">
+                    <div class="member-item member-mobile mt-32">
                     <p class="member-name">
                         Hokage Híu
                     </p>
                         <img src="img/vit-vang-naruto.jpg" alt="HOKAGE" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item member-mobile  mt-32">
                     <p class="member-name">
                         Hokage Dũn
                     </p>
@@ -102,7 +105,7 @@
                     </ul>
 
                     <div class=" row place-list">
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-1 mt-16">
                             <img src="img/newyork.jpg" alt="New york" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -111,7 +114,7 @@
                             <button class="place-buy js-buy-ticket" >Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-1 mt-16">
                             <img src="/img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -120,7 +123,7 @@
                                 <button class="place-buy js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-3">
+                        <div class="col col-3 s-col-1 mt-16">
                             <img src="/img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -258,7 +261,15 @@
         var menuItems = document.querySelectorAll('#nav li a[href *="#"]')
         for  (var i=0 ; i< menuItems.length; i++) {
             var menuItem = menuItems[i];
-            console.log(menuItem)
+            console.log(menuItem.nextElementSibling)
+            menuItem.onclick = function (fix) {
+                var isParentmenu = this.nextElementSibling  &&  this.nextElementSibling.classList.contains('subnav')
+                if (isParentmenu) { 
+                    fix.preventDefault();
+                } else {
+                    header.style.height = null ;
+                }
+            }
         }
     </script>
 </body>

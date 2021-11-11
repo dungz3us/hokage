@@ -1,27 +1,55 @@
 /* máy tính */
 @media (min-width:1024px){
-    #header .mobile-menu{
-        display: none;
-    }
+    
 }
 
 /* tablet */
 @media (min-width:760px)  and (max-width:1024px){
-    .mobile-menu{
-        display: none;
-    }
+    
 }
 
 /* phone */
 @media (max-width: 760px){
+    .s-col-1{
+        width: 100%;
+    }
     #header{
         overflow: hidden;
     }
+    #nav{
+        display: block;
+    }
     #nav> li {
+        display: block;
+    }
+    #nav li a{
+        padding: 1px 24px;
+    }
+    #nav> li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position:initial;
+        background: black;
+    }
+    #nav .subnav a{
+        color: white;
+        padding: 5px 40px;
+    }
+    #header .mobile-menu{
         display: block;
     }
     #header .search-button{
         display: none;
     }
-    
+    #content .member-mobile{
+        width: 100%;
+    }
+    #content .member-img{
+        width: 60%;
+        height: 30%;
+    }
+    #content .member{
+        margin-top: 0;
+    }
 }
