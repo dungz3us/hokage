@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* máy tính */
 @media (min-width:1024px){
     
@@ -62,4 +63,70 @@
     .s-email{
         margin-top: 8px;
     }
+=======
+/* máy tính */
+@media (min-width:1024px){
+    
+}
+
+/* tablet */
+@media (min-width:760px)  and (max-width:1024px){
+    
+}
+
+/* phone */
+@media (max-width: 760px){
+    .s-full-width{
+        width: 100%;
+        text-align: center;
+    }
+    .s-col-1{
+        width: 100%;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #nav{
+        display: block;
+    }
+    #nav> li {
+        display: block;
+    }
+    #nav li a{
+        padding: 1px 24px;
+    }
+    #nav> li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position:initial;
+        background: black;
+    }
+    #nav .subnav a{
+        color: white;
+        padding: 5px 40px;
+    }
+    #header .mobile-menu{
+        display: block;
+    }
+    #header .search-button{
+        display: none;
+    }
+    #content .member-mobile{
+        width: 100%;
+    }
+    #content .member-img{
+        width: 60%;
+        height: 30%;
+    }
+    #content .member{
+        margin-top: 0;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
+    .s-email{
+        margin-top: 8px;
+    }
+>>>>>>> 562fc4ea3fbfacfdf267c3536e4ac274e55f98e9
 } 
