@@ -10,6 +10,10 @@
 
 /* phone */
 @media (max-width: 760px){
+    .s-full-width{
+        width: 100%;
+        text-align: center;
+    }
     .s-col-1{
         width: 100%;
     }
@@ -52,4 +56,10 @@
     #content .member{
         margin-top: 0;
     }
-}
+    .contact-form{
+        margin-top: 16px;
+    }
+    .s-email{
+        margin-top: 8px;
+    }
+} 
