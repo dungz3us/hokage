@@ -1,11 +1,14 @@
 /* máy tính */
-@media (min-width:1024px){
+@media (min-width: 64em){
     
 }
+/* tablet */
+@media (max-width :63.9375em) and (min-width : 47.5em){
 
+}
 
 /* phone */
-@media (max-width: 760px){
+@media (max-width: 47.4375em){
     .s-full-width{
         width: 100%;
         text-align: center;
